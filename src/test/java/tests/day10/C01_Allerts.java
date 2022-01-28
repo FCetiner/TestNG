@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class C01_Alerts {
+public class C01_Allerts {
     //● Bir class olusturun: Alerts
     //● https://the-internet.herokuapp.com/javascript_alerts adresine gidin.
     WebDriver driver;

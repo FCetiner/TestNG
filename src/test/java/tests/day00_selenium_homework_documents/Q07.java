@@ -1,46 +1,61 @@
 package tests.day00_selenium_homework_documents;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+import utilities.TestBase;
 
-public class Q07 {
-    WebDriver driver;
+import java.util.List;
 
-    // 4 TEST METODU OLUSTURUN,oncelik vererek sirasiyla
-    // https://www.n11.com/ SAYFASINA GiDİN.
-    // https://www.gittigidiyor.com/ SAYFASINA GiDiN
-    // https://getir.com/ SAYFASINA GiDiN
-    // https://www.sahibinden.com/ SAYFASINA GiDiN
+public class Q07 extends TestBase {
+// 1) "https://www.facebook.com/" SAYFASINA GiDiN
 
-    @BeforeClass
-    public void set_up(){
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
-        driver.manage().window().maximize();
-    }
-    @Test(priority = 1)
-    public void n11Test(){
-        driver.get("https://www.n11.com/");
-    }
-    @Test(priority = 2)
-    public void gittigidiyorTest(){
-        driver.get("https://www.gittigidiyor.com/");
-    }
-    @Test(priority = 3)
-    public void getirTest(){
-        driver.get("https://getir.com/");
-    }
-    @Test(priority = 4)
-    public void sahibindenTest(){
-        driver.get("https://www.sahibinden.com/");
-    }
-    @AfterClass
-    public void teardown(){
-        driver.close();
-    }
+    // 2) YENi HESAP OLUSTUR BUTONUNA TIKLAYIN
+    // 3) DOGUM TARiHi BOLUMUNDEKi GUNLERiN LiSTESiNi ALIN
+    // 4) DOGUM TARiHi BOLUMUNDEKi AYLARIN LiSTESiNi ALIN
+    // 5) DOGUM TARiHi BOLUMUNDEKi YILLARIN LiSTESiNi ALIN
+
+
+
+   @Test
+    public void test01(){
+       driver.get("https://www.facebook.com");
+       driver.findElement(By.xpath("//a[@data-testid='open-registration-form-button']")).click();
+       WebElement gunOptions=driver.findElement(By.xpath("//select[@id='day']"));
+       Select selectGun=new Select(gunOptions);
+       List<WebElement> gunListesi=selectGun.getOptions();
+       System.out.println("Gün Listesi:\n");
+       for(WebElement each: gunListesi){
+           System.out.print(each.getText()+" ");
+       }
+       System.out.println();
+       WebElement ayOptions=driver.findElement(By.xpath("//select[@id='month']"));
+       Select selectAy=new Select(ayOptions);
+       List<WebElement>ayListesi= selectAy.getOptions();
+       System.out.println("Ay Listesi:\n");
+       for(WebElement each:ayListesi){
+           System.out.print(each.getText()+" ");
+       }
+       System.out.println();
+       WebElement yilOptions=driver.findElement(By.xpath("//select[@id='year']"));
+       Select selectYil=new Select(yilOptions);
+       List<WebElement>yilListesi= selectYil.getOptions();
+       System.out.println("Yil Listesi:\n");
+       for(WebElement each:yilListesi){
+           System.out.print(each.getText()+" ");
+       }
+
+
+   }
+
+
+
+
+
+
+
+
+
 
 }
