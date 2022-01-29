@@ -44,7 +44,7 @@ public class C06_FacebookKayit extends TestBase {
                     sendKeys(Keys.TAB).
                 sendKeys("Ş").
                     sendKeys(Keys.TAB).
-                sendKeys("1988").
+                sendKeys("2000").
                 sendKeys(Keys.TAB).
                 sendKeys(Keys.TAB).
                 sendKeys(Keys.ARROW_RIGHT).
