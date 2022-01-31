@@ -9,4 +9,5 @@ public class H02 {
     //    click "Alert with Textbox" and click 'click the button to demonstrate the prompt box'
     //    and then sendKeys 'TechProEducation' (Please enter your name)
     //    finally print on console this message "Hello TechproEducation How are you today"
+
 }
