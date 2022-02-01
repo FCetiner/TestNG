@@ -52,10 +52,10 @@ public class Q04 {
    select.selectByVisibleText("Price (low to high)");
 
    String expected="PRICE (LOW TO HIGH)";
-   String actuel=driver.findElement(By.className("active_option")).getText();
+   String actual=driver.findElement(By.className("active_option")).getText();
         SoftAssert softAssert=new SoftAssert();
 
-        softAssert.assertEquals(actuel,expected,"Fiyatlar istenildigi gibi siralanmamistir");
+        softAssert.assertEquals(actual,expected,"Fiyatlar istenildigi gibi siralanmamistir");
 
         softAssert.assertAll();
     }
