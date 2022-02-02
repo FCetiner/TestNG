@@ -9,7 +9,7 @@ import utilities.TestBase;
 
 import java.io.File;
 
-public class C04_ScreesShot extends TestBase {
+public class C04_ScreenShot extends TestBase {
 
     @Test
     public void screenTest(){
