@@ -18,7 +18,7 @@ alert variable ile methodlara ulasilabilir
     alert.accept();  vb
     bu kullanim sayesinde switchto() yazmamiza gerek kalmaz
  */
-
+    //Test edin deyince hard assert, verify deyince soft asser kullanilir
 
 
     /*
@@ -39,7 +39,7 @@ alert variable ile methodlara ulasilabilir
      // 8. alert1'e göre dependsOnMethods kullanın
  */
 
-    //Test edin deyince hard assert, verify deyince soft asser kullanilir
+
     @Test
     public void alert1(){
        SoftAssert softAssert=new SoftAssert();
